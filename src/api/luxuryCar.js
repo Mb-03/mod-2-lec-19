@@ -23,5 +23,14 @@ export async function createLuxuryCar(body) {
     body: JSON.stringify(body),
   });
 
-  handleResponse(res);
+  return handleResponse(res);
+}
+
+export async function deleteLuxuryCar(id) {
+  const res = await fetch(`${API_BASE}/luxuryCar/${id}`, {
+    method: "DELETE",
+    credentials: "include",
+  });
+
+  return handleResponse(res);
 }

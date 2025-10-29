@@ -44,6 +44,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = () => {
     logoutMutation.mutate();
+    
   };
 
   return (
